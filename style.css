@@ -1,0 +1,64 @@
+*{
+    background-color: azure;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+h1{
+    background-color: aquamarine;
+}
+#ti.t{
+    background-color: blue;
+    -webkit-text-fill-color: white;
+}
+.introduce1{
+    margin: 25px;
+    width: auto;
+    height: auto;
+    border-color: black;
+    border-style: dashed;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.introduce2{
+    margin: 25px;
+    width: auto;
+    height: auto;
+    border-color: black;
+    border-style: dashed;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+.introduce3{
+    margin: 25px;
+    width: auto;
+    height: auto;
+    border-color: black;
+    border-style: dashed;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+.introduce4{
+    margin: 25px;
+    width: auto;
+    height: auto;
+    border-color: black;
+    border-style: dashed;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+.introduce5{
+    margin: 25px;
+    width: auto;
+    height: auto;
+    border-color: black;
+    border-style: dashed;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
