@@ -1,0 +1,147 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+
+  --light-color: #7ee3f4;
+  --dark-color: #282a37;
+  --point-color: #ff7fc7;
+  --light-bg-color: #033f49;
+  --point-bg-color: #46313d;
+  --input-bg-color: #dbfaff;
+  --check-color: #526d7a;
+}
+
+body {
+  background: var(--dark-color);
+  color: var(--light-color);
+  max-width: 400px;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+.new-item-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.btn {
+  background: var(--dark-color);
+  border: 1px solid var(--light-color);
+  color: var(--light-color);
+  padding: 0.25em 0.5em;
+  border-radius: 0.25em;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  background-color: var(--light-bg-color);
+}
+
+.btn.btn-danger {
+  border: 1px solid var(--point-color);
+  color: var(--point-color);
+}
+
+.btn.btn-danger:hover,
+.btn.btn-danger:focus-visible {
+  background: var(--point-bg-color);
+}
+
+.new-item-form input {
+  outline: none;
+  border: 1px solid var(--light-color);
+  background: var(--input-bg-color);
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  color: var(--dark-color);
+}
+
+.new-item-form input:focus {
+  border: 1px solid var(--light-color);
+}
+
+.header {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  margin-left: 1rem;
+  list-style: none;
+}
+
+.list li:has(input:checked) label {
+  color: var(--check-color);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.list li {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.list li label {
+  display: flex;
+  gap: 0.25rem;
+  cursor: pointer;
+  align-items: center;
+}
+
+.list li:has(input:focus-visible) label {
+  outline: 1px solid var(--light-color);
+}
+
+.list li input {
+  outline: none;
+  width: 0;
+  height: 0;
+  appearance: none;
+  pointer-events: none;
+  position: absolute;
+}
+
+.list li label::before {
+  content: "";
+  display: block;
+  width: 0.9rem;
+  height: 0.9rem;
+  background: var(--input-bg-color);
+  border-radius: 0.25em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list li label:hover::before {
+  background: var(--light-color);
+}
+
+.list li:has(input:checked) label::before {
+  content: "✔";
+  background: var(--check-color);
+  color: var(--input-bg-color);
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.list li:has(input:checked) label:hover::before {
+  background: var(--light-color);
+}
